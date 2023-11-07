@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Electronics</title>
+
+	<style>
+
+		body {
+
+			font-family: Arial, sans-serif;
+
+			margin: 0;
+
+			padding: 0;
+
+		}
+
+
+
+		/* Header section */
+
+		.header {
+
+			background-color: #ececec;
+
+			color: #fff;
+
+			display: flex;
+
+			flex-direction: row;
+
+			align-items: center;
+
+			justify-content: space-between;
+
+			height: 60px;
+
+			padding: 0 20px;
+
+			position: fixed;
+
+			top: 0;
+
+			left: 0;
+
+			width: 100%;
+
+		}
+
+
+
+		.logo {
+
+			margin-right: 10px;
+
+			width: 200px;
+
+			height: 60px;
+
+			position: absolute;
+
+			top: 0;
+
+			left: 80px;
+
+		}
+
+
+
+		.search-box-container {
+
+			display: flex;
+
+			flex-direction: column;
+
+			align-items: center;
+
+			margin-top: 80px;
+
+			margin-bottom: 20px;
+
+			width: 100%;
+
+			text-align: center;
+
+		}
+
+
+
+		.search-bar-title {
+
+			font-size: 24px;
+
+			font-weight: bold;
+
+			margin: 0;
+
+			margin-bottom: 10px;
+
+		}
+
+
+
+		.search-box {
+
+			width: 300px;
+
+			padding: 10px;
+
+			border: 1px solid #ccc;
+
+			border-radius: 4px;
+
+			margin-bottom: 10px;
+
+		}
+
+
+
+		.search-button {
+
+			padding: 10px 20px;
+
+			background-color: #4CAF50;
+
+			color: white;
+
+			border: none;
+
+			border-radius: 4px;
+
+			cursor: pointer;
+
+			margin-left: 10px;
+
+		}
+
+
+
+		h1 {
+
+			margin: 0;
+
+			margin-left: 60px;
+
+		}
+
+
+
+		/* Main content section */
+
+		.content {
+
+			margin-top: 80px;
+
+			padding: 20px;
+
+		}
+
+
+
+		h2 {
+
+			margin-top: 0;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<header class="header">
+
+		<img src="logo.png" alt="Logo" class="logo">
+
+		 
+
+	</header>
+
+	<div class="search-box-container">
+
+		
+
+		<input type="text" id="search-box" class="search-box" placeholder="Search...">
+
+		<button type="button" id="search-button" class="search-button">Search</button>
+
+	</div>
+
+	</div>
+
+	<script src="search.js"></script>
+
+</body>
+  
+
+  
+
+
+
+<head>
+
+	<title>Slideshow with Automatic Sliding Pictures</title>
+
+	<style>
+
+		.slideshow {
+
+			position: relative;
+
+			height: 600px;
+
+			overflow: hidden;
+
+		}
+
+		.slideshow img {
+
+			position: absolute;
+
+			top: 0;
+
+			left: 0;
+
+			width: 100%;
+
+			height: 60%;
+
+			opacity: 0;
+
+			transition: opacity 3s ease-in-out;
+
+		}
+
+		.slideshow img.active {
+
+			opacity: 1;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="slideshow">
+
+		<img src="iphone 14 pro.png" class="active" />
+
+		<img src="iphone 14 pro f.png" />
+
+		<img src="hoodie 2.png" />
+
+		<img src="hoodie 3.png" />
+
+		<img src="hoodie 4.png" />
+
+	</div>
+
+
+
+	<script>
+
+		const slideshow = document.querySelector('.slideshow');
+
+		const images = slideshow.querySelectorAll('img');
+
+		let currentImageIndex = 0;
+
+		let timer = setInterval(() => {
+
+			images[currentImageIndex].classList.remove('active');
+
+			currentImageIndex = (currentImageIndex + 1) % images.length;
+
+			images[currentImageIndex].classList.add('active');
+
+		}, 10000); // Change image every 10 seconds
+
+
+
+		slideshow.addEventListener('mouseenter', () => {
+
+			clearInterval(timer); 
+
+		});
+
+		
+
+		slideshow.addEventListener('mouseleave', () => {
+
+			timer = setInterval(() => {
+
+				images[currentImageIndex].classList.remove('active');
+
+				currentImageIndex = (currentImageIndex + 1) % images.length;
+
+				images[currentImageIndex].classList.add('active');
+
+			}, 10000); // Change image every 10 seconds
+
+		});
+
+	</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+
+
+<table width="2000" align="center" cellpadding="0" cellspacing="0">
+
+
+
+<table width="875" align="center" cellpadding="0" cellspacing="0">
+
+
+
+</td align="center">
+
+
+
+<Font face="arial" size="" color="#ffffff">
+
+
+
+</font>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+</table>
+
+
+
+<br>
+
+
+
+<table width="375" align="center" cellpadding"0" cellspacing="0">
+
+
+
+
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	<div class="products-container">
+
+	 <div class="product-box">
+
+		  <h3> </h3>
+		  
+		  <img src="iphone 14 pro.png" alt="Product Image">
+
+		  <p>Iphone 14 Pro</p>
+
+		  <p>Price: £49.99</p>
+
+		  <label for="quantity">Quantity:</label>
+
+		  <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+		  <button>Add to Cart</button>
+
+		  <button>Buy Now</button>		
+
+	    </div>
+		
+		
+		
+		
+		
+			 <div class="product-box">
+
+		  <h3> </h3>
+		  
+		  <href= "iphone 14 pro.html">
+
+		  <img src="iphone 14 pro.png" alt="Product Image">
+
+		  <p>Iphone 14</p>
+
+		  <p>Price: £49.99</p>
+
+		  <label for="quantity">Quantity:</label>
+
+		  <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+		  <button>Add to Cart</button>
+
+		  <button>Buy Now</button>		
+
+	    </div>
+		
+		
+		
+		
+		
+			 <div class="product-box">
+
+		  <h3> </h3>
+		  
+		  <href= "iphone 14 pro.html">
+
+		  <img src="iphone 14 pro.png" alt="Product Image">
+
+		  <p>Iphone 14 Pro Max</p>
+
+		  <p>Price: £49.99</p>
+
+		  <label for="quantity">Quantity:</label>
+
+		  <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+		  <button>Add to Cart</button>
+
+		  <button>Buy Now</button>		
+
+	    </div>
+			
+	</div>
+</div>
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+
+
+	  <style>
+
+		.products-container {
+
+		  display: flex;
+
+		  flex-wrap: wrap;
+
+		  justify-content: center;
+
+		}
+
+		.product-box {
+
+		  margin: 2px;
+
+		  padding: 2px;
+
+		  border: 2px solid #ccc;
+
+		  border-radius: 3px;
+
+		  width: 190px;
+
+		  text-align: center;
+
+		}
+
+		.product-box img {
+
+		  width: 200px;
+
+		  height: 200px;
+
+		  margin-bottom: 15px;
+
+		}
+
+		.product-box button {
+
+		  background-color: #4CAF50;
+
+		  color: white;
+
+		  padding: 10px;
+
+		  border: none;
+
+		  border-radius: 3px;
+
+		  cursor: pointer;
+
+		  margin-top: 10px;
+
+		}
+
+		.product-box button:hover {
+
+		  background-color: #3e8e41;
+
+		}
+
+	  </style>
+	
+
+	  
+
+	  
+
+	  
+
+	  
+
+<div id="desktop-btf-grid-2" data-gwi="{&quot;visible&quot;:&quot;desktop-btf-grid-2-visible&quot;,&quot;active&quot;:&quot;desktop-btf-grid-2-active&quot;}" data-display-at="smws" data-order-ws="4" class="gw-col csm-placement-id-88d62190-2324-4fde-9dc7-8ceced4a1081 desktop-gateway-btf_bmx-s5.TOOLS celwidget pd_rd_wg-H07dB pd_rd_w-6wWxG pd_rd_r-db94feaa-ec28-4790-aebe-e66fec650075" data-order-sm="4" data-pf_rd_p="88d62190-2324-4fde-9dc7-8ceced4a1081" data-pd_rd_wg="H07dB" data-pd_rd_w="6wWxG" data-pd_rd_r="db94feaa-ec28-4790-aebe-e66fec650075" data-ref_="pd_gw_bmx_s1" data-csa-op-log-render="" data-csa-c-type="widget" data-csa-c-slot-id="desktop-btf-grid-2" data-csa-c-content-id="88d62190-2324-4fde-9dc7-8ceced4a1081" data-csa-c-id="utoamc-83rjo6-i9knmh-ewl49e" data-cel-widget="desktop-btf-grid-2"><!--CardsClient--><div class="a-cardui _multi-asin-thumbnails_fluid_fluidCard__3hmFA" data-a-card-type="basic" id="CardInstancevy3jVDJzX7yY6IZqA9T_ew" data-card-metrics-id="multi-asin-thumbnails_desktop-gateway-btf_8" data-mix-claimed="true"><div class="a-cardui-header"><h2 class="a-color-base headline"><span class="a-truncate" data-a-word-break="normal" data-a-max-rows="2" data-a-overflow-marker="&amp;hellip;" style="line-height:1.3em !important;max-height:2.6em" data-a-updated="true" data-a-recalculate="false"><span class="a-truncate-full a-offscreen"></span><span class="a-truncate-cut" aria-hidden="true" style="height: auto;"></span></span></h2></div><div class="a-cardui-body _multi-asin-thumbnails_fluid_fluidCardBody__3TzJ4 _multi-asin-thumbnails_style_cardBodyNoCTA__2BcxV _multi-asin-thumbnails_style_fluid-body__1avqo"><div class="a-section a-spacing-small _multi-asin-thumbnails_desktopStyle_heroProductBlockContainer__1iqDe"><a class="a-link-normal _multi-asin-thumbnails_style_productHeroBlock__3VTqk
+
+ 
+
+
+
+</tr>
+
+
+
+<td></td>
+
+
+
+<td><iframe width="400" height="300" src="slot the url for the youtube video here" frameborder="1" allowfullscreen></iframe></td>
+
+
+
+<td></td>
+
+
+
+</tr>
+
+
+
+</table>
+
+
+
+<a href="#" id="navBackToTop" aria-label="Back to top" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0; event.preventDefault();">
+
+    <div class="navFooterBackToTop">
+
+    <span class="navFooterBackToTopText">
+
+      Back to top
+
+    </span>
+
+    </div>
+
+  </a>
+
+
+
+<p>
+
+
+
+<H4>
+
+    
+
+    <p> <a href="About Us.html"><button> About us </button></a> <a href="Properties.html"><button> Properties </button></a> <a href="Feedback.html"><button> Feedback </button></a> <a href="Contact Us.html"><button> Contact Us </button></a>
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+  <span>© 2023, Electronic Store.com, Inc. or its affiliates</span>
+
+
+
+  </html>
